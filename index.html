@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAPPY-BIRTHDAY</title>
+    
     <style>
         body {
             margin: 0;
@@ -40,28 +41,42 @@
             -webkit-user-select: none;
             user-select: none;
         }
+        h6 {
+            color: #fff;
+            font-family: "Source Sans Pro";
+            font-size: 2rem;
+            position: relative;
+            padding-top: 20rem;
+        }
     </style>
+
 </head>
 
 <body>
     <center>
-        <h1>Happy Birthday<br>Alisha!!</h1>
+        <h1>Happy Birthday<br>Alisha!!
+            <h6>
+                My Dear Friend... <br>
+                I wish you will achieve everything <br>
+                you want without any compromise. 😉
+            </h6>
+        </h1>
     </center>
     <canvas id="birthday"></canvas>
 
     <audio id="myAudio">
         <source src="audio.mp3" type="audio/mpeg">
     </audio>
-    
+
     <script>
-        window.onload = function() {
+        window.onload = function () {
             let audio = document.getElementById("myAudio");
             audio.play().catch(error => {
-                console.log("Autoplay blocked: ", error);
+                audio.autoplay();
             });
         };
     </script>
-    
+
 
     <script>
         // helper functions
